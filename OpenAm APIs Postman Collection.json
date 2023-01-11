@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "1c22e691-4db7-4d66-87b5-90f582707f01",
+		"name": "OpenAm Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-OpenAM-Username",
+						"value": "amadmin",
+						"type": "default"
+					},
+					{
+						"key": "X-OpenAM-Password",
+						"value": "Welcome@1",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept-API-Version",
+						"value": "resource=1.0,protocol=1.1",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://openam.test.com:8080/openam/json/authenticate",
+					"protocol": "http",
+					"host": [
+						"openam",
+						"test",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"openam",
+						"json",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "iPlanetDirectoryPro",
+						"value": "exP7ZCoYC67QM6k3-oj4syW8YPc.*AAJTSQACMDEAAlNLABx0aGgxUnFUaEZKb2NOMnBhOE5ka1o1Slo2Z3M9AAR0eXBlAANDVFMAAlMxAAA.*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://openam.test.com:8080/openam/json/users/user.1",
+					"protocol": "http",
+					"host": [
+						"openam",
+						"test",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"openam",
+						"json",
+						"users",
+						"user.1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "iPlanetDirectoryPro",
+						"value": "iPkYfPn-uGPPP8Gllxbt3WGbfKM.*AAJTSQACMDEAAlNLABxxWEFaOE1WeFFkc1V5UWJYaEt2NTNYVnNZelk9AAR0eXBlAANDVFMAAlMxAAA.*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept-API-Version",
+						"value": "resource=1.0,protocol=1.1",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"userpassword\": \"Welcome@2\"\n        }"
+				},
+				"url": {
+					"raw": "http://openam.test.com:8080/openam/json/users/user.5",
+					"protocol": "http",
+					"host": [
+						"openam",
+						"test",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"openam",
+						"json",
+						"users",
+						"user.5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "iPlanetDirectoryPro",
+						"value": "iPkYfPn-uGPPP8Gllxbt3WGbfKM.*AAJTSQACMDEAAlNLABxxWEFaOE1WeFFkc1V5UWJYaEt2NTNYVnNZelk9AAR0eXBlAANDVFMAAlMxAAA.*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept-API-Version",
+						"value": "resource=1.0,protocol=1.1",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mail\": \"shobhit.singhal@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://openam.test.com:8080/openam/json/users/user.5",
+					"protocol": "http",
+					"host": [
+						"openam",
+						"test",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"openam",
+						"json",
+						"users",
+						"user.5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "iPlanetDirectoryPro",
+						"value": "iPkYfPn-uGPPP8Gllxbt3WGbfKM.*AAJTSQACMDEAAlNLABxxWEFaOE1WeFFkc1V5UWJYaEt2NTNYVnNZelk9AAR0eXBlAANDVFMAAlMxAAA.*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept-API-Version",
+						"value": "resource=1.0,protocol=1.1",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"username\": \"user.6\",\n            \"userpassword\": \"Welcome@1\",\n            \"mail\": \"tanishuppal@gmail.com\"\n        }"
+				},
+				"url": {
+					"raw": "http://openam.test.com:8080/openam/json/users?_action=create",
+					"protocol": "http",
+					"host": [
+						"openam",
+						"test",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"openam",
+						"json",
+						"users"
+					],
+					"query": [
+						{
+							"key": "_action",
+							"value": "create"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "iPlanetDirectoryPro",
+						"value": "iPkYfPn-uGPPP8Gllxbt3WGbfKM.*AAJTSQACMDEAAlNLABxxWEFaOE1WeFFkc1V5UWJYaEt2NTNYVnNZelk9AAR0eXBlAANDVFMAAlMxAAA.*",
+						"type": "default"
+					},
+					{
+						"key": "Accept-API-Version",
+						"value": "resource=1.0,protocol=1.1",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://openam.test.com:8080/openam/json/users/user.6",
+					"protocol": "http",
+					"host": [
+						"openam",
+						"test",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"openam",
+						"json",
+						"users",
+						"user.6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "iPlanetDirectoryPro",
+						"value": "iPkYfPn-uGPPP8Gllxbt3WGbfKM.*AAJTSQACMDEAAlNLABxxWEFaOE1WeFFkc1V5UWJYaEt2NTNYVnNZelk9AAR0eXBlAANDVFMAAlMxAAA.*",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://openam.test.com:8080/openam/json/users?_queryID=*",
+					"protocol": "http",
+					"host": [
+						"openam",
+						"test",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"openam",
+						"json",
+						"users"
+					],
+					"query": [
+						{
+							"key": "_queryID",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "iplanetDirectoryPro",
+						"value": "rrag8j6-LPLxTL-60tie5bzuJ30.*AAJTSQACMDEAAlNLABxJS0hNMC9YQ2FTTnB2U0pHL2o3cjdKeHRRRFk9AAR0eXBlAANDVFMAAlMxAAA.*",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept-API-Version",
+						"value": "resource=1.0,protocol=1.1",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://openam.test.com:8080/openam/json/sessions?_action=logout",
+					"protocol": "http",
+					"host": [
+						"openam",
+						"test",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"openam",
+						"json",
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "_action",
+							"value": "logout"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
